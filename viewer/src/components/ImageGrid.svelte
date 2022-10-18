@@ -52,6 +52,10 @@
         {/each}
 
         <div class="imagegrid-bottom">
+            <span>
+                made by <a href="https://ka.ge" target="_blank" rel="nofollower">@kage</a>
+            </span>
+            
             <span class="more" on:click={get_more}> more weird brandons &rarr;</span>
         </div>
     </div>
@@ -74,9 +78,9 @@
 
     display: flex;
     flex-direction: row;
-
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 10px;
+    color: var(--muted);
 }
 
 @media (max-width: 768px) {
@@ -85,6 +89,11 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+    }
+
+    .imagegrid-bottom {
+        flex-direction: column-reverse;
+        
     }
 }
 
