@@ -1,6 +1,7 @@
 #
 out/
 model_cache/
+model_cache
 .DS_Store
 
 ## start Python gitignore
