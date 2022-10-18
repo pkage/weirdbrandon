@@ -3,9 +3,7 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from glob import iglob
 import json
-import os
 
 from upload import StorageAPI
 
