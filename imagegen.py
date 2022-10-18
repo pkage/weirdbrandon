@@ -2,8 +2,16 @@
 
 from autodraw.image import StableDiffusion
 from promptgen import RunConfig, load_tags
+from tqdm import tqdm
+
+import sys
+
+if len(sys.argv) != 2:
+    print(f'usage: {sys.argv[0]} NUMBER')
+    sys.exit(1)
 
 PREFIX = 'out/'
+BATCH_COUNT = int(sys.argv[1])
 
 class SDBatchGenerator:
     sd = None
@@ -20,7 +28,8 @@ class SDBatchGenerator:
 
         img = self.sd.stable_diffusion(
             rc.get_prompt(),
-            seed=rc.get_seed()
+            seed=rc.get_seed(),
+            unsafe=True
         )
 
         img.save(rc.get_image_name(prefix='out/'))
@@ -31,7 +40,5 @@ class SDBatchGenerator:
 if __name__ == '__main__':
     sdbg = SDBatchGenerator(PREFIX)
     
-    BATCH_COUNT = 3
-    for i in range(BATCH_COUNT):
-        print(f'generating {i+1} of {BATCH_COUNT}')
+    for i in tqdm(range(BATCH_COUNT)):
         sdbg.generate()
