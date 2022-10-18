@@ -2,7 +2,11 @@
 out/
 model_cache/
 model_cache
+all_ids.json
+all_objs.json
 .DS_Store
+.env
+weirdbrandon-data-dt/
 
 ## start Python gitignore
 # Byte-compiled / optimized / DLL files
