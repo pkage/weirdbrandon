@@ -26,6 +26,13 @@
     img.preview {
         width: 256px;
         height: 256px;
+
+        opacity: 1;
+        
+    }
+
+    img.preview:hover {
+        opacity: 0.5;
     }
 
     .image {
