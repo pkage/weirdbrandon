@@ -21,8 +21,16 @@
         const prompt = ['joe biden', ...modifiers]
         return prompt.join(', ')
     }
+
+    const on_keypress = e => {
+        console.log('keyfiring')
+        if (e.key === 'Escape') {
+            on_close()
+        }
+    }
 </script>
 
+<svelte:body on:keyup={on_keypress}/>
 
 <div class="image-modal">
     <div class="image-modal-close" on:click={on_close}>&times;</div>
