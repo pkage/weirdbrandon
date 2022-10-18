@@ -6,6 +6,7 @@ all_ids.json
 all_objs.json
 .DS_Store
 .env
+artists.txt
 weirdbrandon-data-dt/
 
 ## start Python gitignore
