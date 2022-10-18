@@ -53,7 +53,7 @@
 
         <div class="imagegrid-bottom">
             <span>
-                made by <a href="https://ka.ge" target="_blank" rel="nofollower">@kage</a>
+                made by <a href="https://ka.ge" target="_blank" rel="noreferrer">@kage</a> / <a href="https://github.com/pkage/weirdbrandon" target="_blank" rel="noreferrer">source</a>
             </span>
             
             <span class="more" on:click={get_more}> more weird brandons &rarr;</span>
